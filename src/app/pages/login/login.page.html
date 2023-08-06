@@ -1,0 +1,82 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-title>
+      <p>اهلا بك فى تطبيق الجزيرة</p>
+      <h1>سجل دخول</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+
+    <form [formGroup]="form">
+
+
+      <div class="animate__animated animate__zoomIn fast">
+        <ion-label>ادخل رقم الهاتف</ion-label>
+        <ion-item lines="none" mode="md">
+          <ion-input formControlName="phone" placeholder="ادخل رقم الهاتف"></ion-input>
+          <div class="end" slot="end" (click)="chooseCountry($event)">
+            <span dir="ltr"> +{{country?.callingCode}}</span>
+            <!-- <ion-img src="../../../assets/images/iraq.png"></ion-img> -->
+            <ion-text slot="end">
+              {{country?.emoji}}
+            </ion-text>
+          </div>
+        </ion-item>
+      </div>
+      <div class="animate__animated animate__zoomIn fast">
+        <ion-label>كلمة المرور</ion-label>
+        <ion-item lines="none" mode="md">
+          <ion-input formControlName="password" type="password" placeholder="ادخل كلمة المرور"></ion-input>
+        </ion-item>
+      </div>
+      <!-- <p class="animate__animated animate__zoomIn fast" (click)="nav('otp')">
+      نسيت كلمة السر
+    </p> -->
+    </form>
+  </div>
+
+  <ion-popover #popover [dismissOnSelect]="true" [isOpen]="isOpen" (didDismiss)="isOpen = false" mode="ios">
+    <ng-template>
+
+
+      <ion-content class="popOver">
+        <!-- <ion-list>
+          <ion-item *ngFor="let count of countries">
+            <ion-label >{{count.emoji}}</ion-label>
+            <ion-label>{{count.callingCode}}</ion-label>
+          </ion-item>
+        </ion-list> -->
+        <!-- <ion-header mode="ios">
+          <ion-toolbar>
+            <ion-searchbar (ionChange)="search()" [(ngModel)]="searchText" placeholder=""></ion-searchbar>
+          </ion-toolbar>
+        </ion-header> -->
+        <ion-list class="countries" approxItemHeight="53px">
+          <ion-item *ngFor="let c of viewCountries" (click)="selectCountry(c)">
+            <ion-text slot="start" style="margin-inline-end: 12px ;">
+              {{c.emoji}}
+            </ion-text>
+            <ion-label>
+              <span dir="ltr">
+                +{{c.callingCode}}
+              </span>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+</ion-content>
+<ion-footer>
+  <ion-button class="mainBtn animate__animated animate__zoomIn delay1-6" expand="block" mode="ios" fill="clear"
+    (click)="nav('tabs/home')">
+    سجل دخول
+  </ion-button>
+  <ion-button class="subBtn animate__animated animate__zoomIn delay1-6" expand="block" mode="ios" fill="clear"
+    (click)="nav('register')">
+    موظف جديد؟
+  </ion-button>
+</ion-footer>

@@ -1,0 +1,53 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-button slot="start" mode="ios" fill="clear" (click)="back()">
+      <ion-icon color="dark" slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="userData">
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="../../../assets/images/menu/Avatar.svg" />
+      </ion-avatar>
+      <ion-label>
+        <h3>خالد السيد</h3>
+        <p>موظف</p>
+      </ion-label>
+    </ion-item>
+  </div>
+  <div class="list">
+
+    <ion-item lines="none" button>
+      <ion-img slot="start" src="../../../assets/images/menu/chart-pie.svg"></ion-img>
+      <ion-label>تقارير</ion-label>
+    </ion-item>
+    <ion-item lines="none" button>
+      <ion-img slot="start" src="../../../assets/images/menu/shopping_cart.svg"></ion-img>
+      <ion-label>قائمة منتجات</ion-label>
+    </ion-item>
+    <ion-item lines="none" button (click)="nav('/storages')">
+      <ion-img slot="start" src="../../../assets/images/menu/storage.svg"></ion-img>
+      <ion-label>ادارة المخازن</ion-label>
+    </ion-item>
+    <ion-item lines="none" button>
+      <ion-img slot="start" src="../../../assets/images/menu/user-group.svg"></ion-img>
+      <ion-label>ادارة الموظفين</ion-label>
+    </ion-item>
+
+    <ion-item lines="none" button>
+      <ion-img slot="start" src="../../../assets/images/menu/settings.svg"></ion-img>
+      <ion-label>صلاحيات</ion-label>
+    </ion-item>
+    <ion-item lines="none" button>
+      <ion-img slot="start" src="../../../assets/images/menu/logout.svg"></ion-img>
+      <ion-label>تسجيل الخروج</ion-label>
+    </ion-item>
+
+  </div>
+
+</ion-content>

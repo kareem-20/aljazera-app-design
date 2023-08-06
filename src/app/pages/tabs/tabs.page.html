@@ -1,0 +1,21 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom,top">
+    <ion-tab-button #tab1 tab="home">
+      <!-- <ion-icon name="flash"></ion-icon> -->
+      <img src="../../../assets/images/tabs/home{{tab1.selected?'1':'2'}}.svg" alt="">
+      <ion-label>الرئيسية</ion-label>
+    </ion-tab-button>
+    <ion-tab-button #tab2 tab="tasks">
+      <img src="../../../assets/images/tabs/regulartask{{tab2.selected?'.png':'2.svg'}}" alt="">
+      <ion-label>مهامى</ion-label>
+    </ion-tab-button>
+    <ion-tab-button #tab3 tab="accounts">
+      <img src="../../../assets/images/tabs/user-group{{tab3.selected?'1':'2'}}.svg" alt="">
+      <ion-label>حسابات</ion-label>
+    </ion-tab-button>
+    <ion-tab-button #tab4 tab="subscriptions">
+      <img src="../../../assets/images/tabs/stars{{tab4.selected?'1':'2'}}.svg" alt="">
+      <ion-label>اشتراكات</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

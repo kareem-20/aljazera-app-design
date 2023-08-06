@@ -1,0 +1,75 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-button slot="start" mode="ios" fill="clear">
+      <ion-icon color="dark" slot="icon-only" name="menu-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button slot="end" mode="ios" fill="clear">
+      <img src="../../../assets/images/home/notification.svg" alt="">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment value="0" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="0">
+      <ion-label>قيد المعالجة</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="1">
+      <ion-label>انتظار</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>مؤجلة</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="3">
+      <ion-label>منتهية</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="tasks">
+    <div class="container">
+      <div class="task-box animate__animated animate__fadeIn fast">
+        <div class="start">
+          <img src="../../../assets/images/home/more_vert.svg" alt="">
+        </div>
+        <div class="content">
+          <div class="content-header">
+            <div class="header-start">
+              <h3>فحص راوتر #125</h3>
+              <p>اليوم</p>
+            </div>
+            <div class="header-end">
+              <span>دعم</span>
+            </div>
+          </div>
+          <p class="desc">قم بمراجعة حسابات الشركة والتأكد من دقة واكتمال السجلات المالية...</p>
+          <p class="status">
+            <span></span>
+            قيد المعالجة
+          </p>
+        </div>
+      </div>
+      <div class="task-box animate__animated animate__fadeIn fast">
+        <div class="start">
+          <img src="../../../assets/images/home/more_vert.svg" alt="">
+        </div>
+        <div class="content">
+          <div class="content-header">
+            <div class="header-start">
+              <h3>توصيل النت لعميل #173</h3>
+              <p>اليوم</p>
+            </div>
+            <div class="header-end">
+              <span>انستليشن</span>
+            </div>
+          </div>
+          <p class="desc">قم بمراجعة حسابات الشركة والتأكد من دقة واكتمال السجلات المالية...</p>
+          <p class="status">
+            <span></span>
+            قيد المعالجة
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
